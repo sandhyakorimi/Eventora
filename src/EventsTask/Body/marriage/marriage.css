@@ -1,0 +1,205 @@
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: rgb(249, 240, 228); */
+    /* color: white; */
+    
+  }
+  
+  .product-card {
+
+    height: 110vh;
+    flex-direction: column;
+    text-align:center;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); 
+    background-color: #ffccd5; /* Light pink card background */
+    border: 1px solid #ff4d6d;
+    font-size: 30px;
+
+  }
+  .mrg2 {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+  .product-card img {
+    /* width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px; */
+    width: 100%; 
+    height: 80vh;
+    object-fit: cover;
+
+  }
+  
+  .product-card:hover {
+    transform: scale(1.02,1.02);
+    cursor: pointer;
+    box-shadow: 1px 10px 8px rgba(4, 4, 4, 0.1);
+  }
+
+span{
+  font-size: 35px;
+  font-weight: bold;
+}
+.product-name{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  top: 5px;
+}
+
+.BuyBtn{
+  height: 6vh;
+  width: 15vw;
+  position: relative;
+  /* left: 80px; */
+  bottom: 5px;
+  font-size:31px;
+}
+.LikeBtn{
+  position: relative;
+  bottom: 380px;
+  left:90px ;
+height: 0px;
+
+}
+
+
+
+
+
+
+
+  .wishlist-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 80px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .wishlist-item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .wishlist-img {
+    max-height: 150px;
+    overflow: hidden;
+  }
+  
+  .wishlist-details {
+    margin-top: 10px;
+  }
+  
+
+  /* Order Now Page Specific Styles */
+.order-now-page{
+  /* height: 200vh; */
+  width: 100vw;
+  display: flex;
+}
+.order-now-page .product-card {
+  width: 40%;
+  height: 70%;
+  margin: 20px;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  background-color: #ffccd5; /* Light pink card background */
+  border: 1px solid #ff4d6d;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-now-page .product-card .img {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.order-now-page .product-card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.order-now-page .product-card span, .order-now-page .product-card p {
+  margin: 10px 0;
+}
+/* 
+.order-now-page .product-card .LikeBtn {
+  margin-top: 10px;
+  position: relative;
+  left: 20px;
+  bottom: 650px;
+} */
+
+.orderCard{
+  height: 137vh;
+  width: 30vw;
+  background-color: #ffccd5; 
+  border: 1px solid #ff4d6d;
+  margin: 20px;
+  font-size: 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  flex: 1;
+          border: "1px solid #ccc";
+          /* padding: "29px"; */
+         border-radius: "10px";
+}
+
+.orderCard input, .orderCard select,.orderCard option  {
+  width: 100%;
+  font-size: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;display: block;
+  /* border: 1px solid #ccc; */
+}
+.myinput{
+  font-Size:35px;
+}
+.place-order-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  /* background-color: #c9184a; */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.orderCard label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 20px; /* Space between radio buttons */
+}
+
+.orderCard input[type="radio"] {
+  margin-right: 8px; /* Space between the radio button and its label */
+}
+
