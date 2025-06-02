@@ -121,7 +121,7 @@ import { useLocation } from "react-router-dom";
 const BuyNow = () => {
   const location = useLocation();
   const item = location.state;
-
+const [showAlert, setShowAlert] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -135,7 +135,8 @@ const BuyNow = () => {
   };
 
   const handleOrder = () => {
-    alert("Order placed successfully!\n" + JSON.stringify(formData, null, 2));
+    // alert("Order placed successfully!\n" + JSON.stringify(formData, null, 2));
+    setShowAlert(true);
   };
 
   if (!item) {
@@ -217,6 +218,96 @@ const BuyNow = () => {
         >
          <h1> Place Order</h1>
         </button>
+{showAlert && (
+  <div
+    style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      width: "100vw",
+      height: "100vh",
+      background: "rgba(0, 0, 0, 0.4)",
+      backdropFilter: "blur(10px)",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      zIndex: 9999,
+      padding: "20px",
+      boxSizing: "border-box",
+    }}
+  >
+    <div
+      style={{
+        width: "90vw",
+        maxWidth: "600px",
+        minHeight: "400px",
+        background: "rgba(255, 255, 255, 0.1)",
+        borderRadius: "30px",
+        padding: "40px",
+        boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
+        backdropFilter: "blur(20px)",
+        border: "1px solid rgba(255, 255, 255, 0.2)",
+        color: "#fff",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+    >
+      <h2
+        style={{
+          fontSize: "36px",
+          marginBottom: "30px",
+          color: "#00f5d4",
+          fontWeight: "bold",
+        }}
+      >
+        ✅ Order Placed Successfully!
+      </h2>
+
+      <div
+        style={{
+          fontSize: "28px",
+          color: "#f1f1f1",
+          textAlign: "left",
+          width: "100%",
+          lineHeight: "1.6",
+        }}
+      >
+        <p><strong>Name:</strong> {formData.name}</p>
+        <p><strong>Address:</strong> {formData.address}</p>
+        <p><strong>Contact:</strong> {formData.contact}</p>
+        <p><strong>Payment Method:</strong> {formData.paymentMethod}</p>
+      </div>
+
+      <button
+        onClick={() => setShowAlert(false)}
+        style={{
+          marginTop: "40px",
+          padding: "15px 40px",
+          background: "#00b4d8",
+          border: "none",
+          borderRadius: "12px",
+          color: "#fff",
+          cursor: "pointer",
+          fontWeight: "bold",
+          fontSize: "24px",
+          alignSelf: "center",
+        }}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
+
+
+
+
+
+
       </div>
     </div>
   );
